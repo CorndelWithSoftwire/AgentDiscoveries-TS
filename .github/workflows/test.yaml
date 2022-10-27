@@ -1,7 +1,9 @@
 name: Test
 on:
-  - push
-  - pull_request
+  push:
+    branches: [$default-branch]
+  pull_request:
+    branches: [$default-branch]
 jobs:
   test-backend:
     runs-on: ubuntu-latest
